@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
+@import url('https://fonts.googleapis.com/css?family=Aladin');
 
 body{background-color: #00141;
 }
 
 h1{
-  color:black
+  color: black
   font-family: "Aladin"
 }
 
