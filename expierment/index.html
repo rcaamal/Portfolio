@@ -316,24 +316,7 @@
 
                     tablearr.push(coffeeRow());
 
-                    if(parseInt($("#shots").val()) > 0)
-                    {
-                        tablearr.push(shotsRow());
-                    }
-
-                    if($("input[name='milk']:checked").attr('id') != "none")
-                    {
-                        tablearr.push(milkRow());
-                    }
-
-                    if(extraRows().length > 0)
-                    {
-                        extratr = extraRows();
-                        $.each(extratr, function(i,a){
-                            tablearr.push(a);
-                        });
-                    }
-
+                  
                     var html = "";
                     $.each(tablearr,function(i,a){
                         html += "<tr>"
@@ -347,7 +330,7 @@
                     $('#outtable > tbody').html(html);
                 }
 
-                
+
 
                 function coffeeCalculation(){
                     if(coffeeTypeValidation()){
