@@ -25,9 +25,7 @@
                 patients will be attened from urgent to not urgent.</p>
               </div>
             </div>
-            <form id="drForm" onsubmit= "return Name()","return Emergency()",
-                  "return Dates()","return DoctorTab()","return docs()" ,"return createTable()" 
-                   mehtod= "post">
+            <form id="drForm" method="post">
     <!--Name-->
                  <div class="row">
                      <div class="col-md-6">
@@ -95,7 +93,7 @@
   <!--this will submit it all and show on the same page-->
                            <div class="row">
                      <div class="col-md-12 text-center">
-                       <input type="submit" value="Submit">
+                       <input type="submit" onclick="return Finish()">
                      </div>
                        </div>
 
@@ -193,6 +191,16 @@
                $('#outable > tbody').html(html);
            }
 
+            function Finish(){
+              if(DoctorTab()){
+               Name();
+                Emergency();
+                Dates();
+                 DoctorTab();
+                  docs();
+              }
+              return false;
+            }
 
 
 </body>
