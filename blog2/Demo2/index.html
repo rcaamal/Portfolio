@@ -26,8 +26,7 @@
               </div>
             </div>
             <form id="drForm" method="post">
-    <!--title-->
-    <div class= "row">
+    <!--Doctor-->
     <div class="col-md-6">
 
    <h4>Title</h4>
@@ -127,8 +126,7 @@
                 </div>
                   </div>
                 </div>
-              </div>
-            </div>
+
   <!--this will submit it all and show on the same page-->
                            <div class="row">
                      <div class="col-md-12 text-center">
@@ -144,7 +142,7 @@
             <div class="text-center">
               <h3>The Appointment</h3>
               </div>
-            <div class="output">
+              <div class="slip">
                 <div class =row>
                   <div class="col-md-12">
                     <table class="table table-bordered" id="outable">
@@ -164,7 +162,7 @@
                     </table>
                   </div>
                   </div>
-
+                </div>
 
     <!--jquery and javascript-->
     <script>
@@ -172,8 +170,8 @@
     //this is to check if there is an input
 
 
-              function DoctorTab() {
-           return $("input:radio[name='title']").is(":checked") && $("input:radio[name='patient']").is(":checked");
+    function DoctorTab() {
+                   return $("input:radio[name='Doctors']").is(":checked");
                }
 
 
@@ -181,16 +179,10 @@
 
 
            function docs() {
-
-        var titleID = $("input[name='title']:checked").attr('id');
-            var patientID = $("input[name='patient']:checked").attr('id');
-
-
-            var titleLabel = $("label[for='"+titleID+"']").text();
-              var patientLabel = $("label[for='"patientID+"']").text();
-
-
-          var doc = [titleLabel, patientLabel];
+                    //grab the two id's, just to make the next step easier to read
+                    var drID = $("input[name='Doctors']:checked").attr('id');
+                    var doctorLabel = $("label[for='"+drID+"']").text();
+                    var doc = [doctorLabel];
 
                     return doc;
                 }
