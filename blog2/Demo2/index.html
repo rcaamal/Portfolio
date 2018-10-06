@@ -74,13 +74,13 @@
             <label for="a1">New Born-Toddler</label>
 
             <input type="radio" name="age"  id="a2">
-              <label for="a2">5-10</label>
+              <label for="a2">5-10 yrs old</label>
 
               <input type="radio" name="age"  id="a3">
-                 <label for="a3">11-17</label>
+                 <label for="a3">11-1 yrs old</label>
 
                  <input type="radio" name="age"  id="a4">
-                    <label for="a4">18+</label>
+                    <label for="a4">18+ yrs old</label>
                  </div>
     <!--Date-->
 
@@ -170,8 +170,12 @@
     //this is to check if there is an input
 
 
-    function DoctorTab() {
-                   return $("input:radio[name='Doctors']").is(":checked");
+              function DoctorTab() {
+           return $("input:radio[name='title']").is(":checked") &&
+           $("input:radio[name='patient']").is(":checked") &&
+           $("input:radio[name='age']").is(":checked") &&
+           $("input:radio[name='Date']").is(":checked") &&
+           $("input:radio[name='Doctors']").is(":checked") &&;
                }
 
 
@@ -179,10 +183,20 @@
 
 
            function docs() {
-                    //grab the two id's, just to make the next step easier to read
-                    var drID = $("input[name='Doctors']:checked").attr('id');
-                    var doctorLabel = $("label[for='"+drID+"']").text();
-                    var doc = [doctorLabel];
+
+        var titleID = $("input[name='title']:checked").attr('id');
+            var patientID = $("input[name='patient']:checked").attr('id');
+                  var ageID = $("input[name='age']:checked").attr('id');
+                var dateID = $("input[name='Date']:checked").attr('id');
+                var drID = $("input[name='Doctors']:checked").attr('id');
+
+            var titleLabel = $("label[for='"+titleID+"']").text();
+              var patientLabel = $("label[for='"patientID+"']").text();
+                var ageLabel = $("label[for='"ageID+"']").text();
+                var dateLabel = $("label[for='"+dateID+"']").text();
+                var doctorLabel = $("label[for='"+drID+"']").text();
+
+          var doc = [titleLabel,patientLabel,ageLabel,dateLabel,doctorLabel];
 
                     return doc;
                 }
