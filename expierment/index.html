@@ -35,13 +35,19 @@
                             <div class="col-sm-6">
 
                                 <!--COFFEE TYPE-->
-                                    <h4>Coffee Type</h4>
-                                    <div class="inside">
-                                        <input type="radio" name="coffeetype" value="0.5" id="coffee" checked="checked">
-                                        <label for="coffee">Coffee</label>
+                                <h4>Doctors</h4>
+                                      <div class="inside">
+                        <input type="radio" name="Doctors" id="Dr1" checked="checked">
+                            <label for="Dr1">Dr.Mike</label>
 
-                                        <input type="radio" name="coffeetype" value="1" id="espresso">
-                                        <label for="espresso">Espresso</label>
+                            <input type="radio" name="Doctors"  id="Dr2">
+                               <label for="Dr2">Dr.Miguel</label>
+
+                               <input type="radio" name="Doctors"  id="Dr3">
+                                  <label for="Dr3">Dr.Violet</label>
+
+                                  <input type="radio" name="Doctors"  id="Dr4">
+                                     <label for="Dr4">Dr.Sofia</label>
                                     </div>
                                 <!--/COFFEE TYPE-->
 
@@ -217,11 +223,11 @@
             <script>
                 //function checks if both required radio buttons are checked
                 function coffeeTypeValidation() {
-                    return $("input:radio[name='coffeetype']").is(":checked") && $("input:radio[name='size']").is(":checked");
+                    return $("input:radio[name='Doctors']").is(":checked") && $("input:radio[name='size']").is(":checked");
                 }
 
                 function coffeeTypeTotal() {
-                    coffeeBase = $("input[name='coffeetype']:checked").val();
+                    coffeeBase = $("input[name='Doctors']:checked").val();
                     coffeeSize = $("input[name='size']:checked").val();
                     return coffeeBase * coffeeSize;
                 }
@@ -255,14 +261,14 @@
 
                 function coffeeRow() {
                     //grab the two id's, just to make the next step easier to read
-                    var coffeeID = $("input[name='coffeetype']:checked").attr('id');
+                    var coffeeID = $("input[name='Doctors']:checked").attr('id');
                     var sizeID = $("input[name='size']:checked").attr('id');
 
                     //grab the text from the label for the element for our output
                     var coffeeLabel = $("label[for='"+coffeeID+"']").text();
                     var sizeLabel = $("label[for='"+sizeID+"']").text();
 
-                    var coffeeCalories = $("input[name='coffeetype']:checked").val() * $("input[name='size']:checked").val();
+                    var coffeeCalories = $("input[name='Doctors']:checked").val() * $("input[name='size']:checked").val();
 
                     var coffeetr = [coffeeLabel, sizeLabel, coffeeCalories];
 
