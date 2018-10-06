@@ -26,40 +26,39 @@
               </div>
             </div>
             <form id="drForm" method="post">
-    <!--Name-->
-                 <div class="row">
-                     <div class="col-md-6">
+    <!--Doctor-->
+    <div class="col-md-6">
 
-                     <h4>Name</h4>
-                       <div class="inside">
-                         <label for"name" >
-                            <input type="text" name="YourName:"
-                              placeholder = "Full name here">
-                              </div>
+   <h4>Doctors</h4>
+         <div class="inside">
+<input type="radio" name="Doctors" id="Dr1" checked="checked">
+<label for="Dr1">Dr.Mike</label>
+
+<input type="radio" name="Doctors"  id="Dr2">
+  <label for="Dr2">Dr.Miguel</label>
+
+  <input type="radio" name="Doctors"  id="Dr3">
+     <label for="Dr3">Dr.Violet</label>
+
+     <input type="radio" name="Doctors"  id="Dr4">
+        <label for="Dr4">Dr.Sofia</label>
+     </div>
 
 
 
 
-<!--Doctor-->
+<!--Name-->
 </div>
 
+                       <div class="row">
+                           <div class="col-md-6">
 
-                      <div class="col-md-6">
-
-                     <h4>Doctors</h4>
-                           <div class="inside">
-             <input type="radio" name="Doctors" id="Dr1" checked="checked">
-                 <label for="Dr1">Dr.Mike</label>
-
-                 <input type="radio" name="Doctors"  id="Dr2">
-                    <label for="Dr2">Dr.Miguel</label>
-
-                    <input type="radio" name="Doctors"  id="Dr3">
-                       <label for="Dr3">Dr.Violet</label>
-
-                       <input type="radio" name="Doctors"  id="Dr4">
-                          <label for="Dr4">Dr.Sofia</label>
-                       </div>
+                           <h4>Name</h4>
+                             <div class="inside">
+                               <label for"name" >
+                                  <input type="text" name="YourName:"
+                                    placeholder = "Full name here">
+                                    </div>
 <!--Illness-->
 
                 </div>
@@ -174,9 +173,6 @@
                var sliparr = [];
 
                 sliparr.push(docs());
-                slipar.push(Dates());
-                  slipar.push(Emergency());
-                  slipar.push(Name());
 
                var html = "";
                $.each(sliparr,function(i,a){
