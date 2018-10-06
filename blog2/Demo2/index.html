@@ -25,8 +25,8 @@
                 patients will be attened from urgent to not urgent.</p>
               </div>
             </div>
-            <form id="drForm" method="post">
-
+            <form id="drForm" action= "/action_page.php" onsubmit= "return Name()","return Emergency()",
+                  "return Dates()","return DoctorTab()" mehtod= "post">
     <!--Name-->
                  <div class="row">
                      <div class="col-md-6">
@@ -34,7 +34,7 @@
                      <h4>Name</h4>
                        <div class="inside">
                          <label for"name" >
-                            <input type="text" id="name" name="YourName"
+                            <input type="text" name="YourName:"
                               placeholder = "Full name here">
                               </div>
 
@@ -45,7 +45,7 @@
 </div>
 
 
-                              <div class="col-md-6">
+                      <div class="col-md-6">
 
                      <h4>Doctors</h4>
                            <div class="inside">
@@ -71,7 +71,7 @@
              <h4>Emergency Description</h4>
                    <div class="inside">
                     <label for"emergency" >
-                      <input type="text" id="emergency" name="emergency"
+                      <input type="text" name="Emergency:"
                       placeholder = "tell us your emergency">
                     </div>
                   </div>
@@ -82,8 +82,8 @@
                <h4>Today's Date</h4>
                        <div class="inside">
                                 <label for"Date" >
-                          <input type="text" id="Date" name="Date"
-                            placeholder = "Enter Date MM/DD/YYYY">
+                          <input type="text"  name="Date"
+                            placeholder ="Enter Date MM/DD/YYYY ">
                             </div>
                             </div>
                         </div>
@@ -94,13 +94,13 @@
   <!--this will submit it all and show on the same page-->
                            <div class="row">
                      <div class="col-md-12 text-center">
-                       <input type="submit" onclick="return Finsh()">
+                       <input type="submit" value="Submit">
                      </div>
                        </div>
 
            </form>
 
-           <div class="text-center">
+      <!--     <div class="text-center">
   <p>-------------------------------------------------------------------------------------------</p>
             </div>
             <div class="text-center">
@@ -126,7 +126,7 @@
                   </div>
                   </div>
                 </div>
-
+-->
     <!--jquery and javascript-->
     <script>
 
@@ -161,47 +161,8 @@
                 return false;
             }
            }
-           function allFields(){
+        
 
-           var DoctorID = $("input[name='Doctors']:checked").attr('id');
-                      var doctor= $("label[for='"+DoctorID+"']").text();
-                  var doctorName = [doctor];
-
-                  return doctorName;
-                }
-
-                function createTheTable(){
-                  var slip = [];
-
-                  slip.push(allFields());
-                }
-
-
-                  var html = "";
-          $.each(slip,function(i,a){
-            html += "<tr>"
-                      $.each(a, function(ind,arr){
-                                  html +="<td>"
-                                  html += slip[i][ind];
-                              html +="</td>"
-                                          });
-                                          html += "</tr>"
-                                      });
-                                      $('#outable > tbody').html(html);
-                                  }
-
-                }
-
-           function Finish()
-           {
-             if(DoctorTab()){
-               Name();
-               Emergency();
-               Dates();
-
-             }
-             return false;
-           }
 
 
 
