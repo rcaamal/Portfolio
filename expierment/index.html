@@ -226,38 +226,7 @@
                     return $("input:radio[name='Doctors']").is(":checked") && $("input:radio[name='size']").is(":checked");
                 }
 
-                function coffeeTypeTotal() {
-                    coffeeBase = $("input[name='Doctors']:checked").val();
-                    coffeeSize = $("input[name='size']:checked").val();
-                    return coffeeBase * coffeeSize;
-                }
-
-                function shotsTotal() {
-                    return parseInt($("#shots").val());
-                }
-
-                function milkTotal() {
-                    return parseInt($("input[name='milk']:checked").val());
-                }
-
-                function extraTotal() {
-                    var sum = 0;
-                    $(".extra:checkbox").each(function(){
-                       if(this.checked){
-                           sum += $(this).val() * $("input[type='number'][name= " + this.name + "]").val();
-                       }
-                    });
-                    return sum;
-                }
-
-                function calorieTotal() {
-                    var total = 0;
-                    total += coffeeTypeTotal();
-                    total += shotsTotal();
-                    total += milkTotal();
-                    total += extraTotal();
-                    $("#totaltarget").html(total);
-                }
+                      
 
                 function coffeeRow() {
                     //grab the two id's, just to make the next step easier to read
@@ -299,7 +268,7 @@
 
                 function coffeeCalculation(){
                     if(coffeeTypeValidation()){
-                      
+
                         tableMaker();
                     }
                     return false;
