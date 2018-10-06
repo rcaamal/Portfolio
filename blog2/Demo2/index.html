@@ -100,7 +100,7 @@
 
            </form>
 
-      <!--     <div class="text-center">
+      <div class="text-center">
   <p>-------------------------------------------------------------------------------------------</p>
             </div>
             <div class="text-center">
@@ -126,7 +126,7 @@
                   </div>
                   </div>
                 </div>
--->
+
     <!--jquery and javascript-->
     <script>
 
@@ -162,7 +162,35 @@
             }
            }
 
+           function docs() {
+                    //grab the two id's, just to make the next step easier to read
+                    var drID = $("input[name='Doctors']:checked").attr('id');
+                    var doctorLabel = $("label[for='"+drID+"']").text();
+                    var doc = [doctorLabel];
 
+                    return doc;
+                }
+
+           function createTable() {
+               var sliparr = [];
+
+                sliparr.push(docs());
+               sliparr.push(Name());
+               sliparr.push(Emergency());
+               sliparr.push(Dates());
+
+               var html = "";
+               $.each(sliparr,function(i,a){
+                   html += "<tr>"
+                   $.each(a, function(ind,arr){
+                       html +="<td>"
+                       html += tablearr[i][ind];
+                       html +="</td>"
+                   });
+                   html += "</tr>"
+               });
+               $('#outable > tbody').html(html);
+           }
 
 
 
