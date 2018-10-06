@@ -51,21 +51,7 @@
                                     </div>
                                 <!--/COFFEE TYPE-->
 
-                            </div>
-
-                            <div class="col-sm-6">
-                                <!--SIZE-->
-                                    <h4>Size</h4>
-                                    <div class="inside">
-                                        <input type="radio" name="size" value="2" id="eightoz" checked="checked"><label for="eightoz">8oz</label>
-
-                                        <input type="radio" name="size" value="3" id="twelveoz"><label for="twelveoz">12oz</label>
-
-                                        <input type="radio" name="size" value="4" id="sixteenoz"><label for="sixteenoz">16oz</label>
-
-                                        <input type="radio" name="size" value="5" id="twentyoz"><label for="twentyoz">20oz</label>
-                                    </div>
-                                <!--/SIZE-->
+                          
                             </div>
 
                     </div>
@@ -129,7 +115,7 @@
             <script>
                 //function checks if both required radio buttons are checked
                 function coffeeTypeValidation() {
-                    return $("input:radio[name='Doctors']").is(":checked") && $("input:radio[name='size']").is(":checked");
+                    return $("input:radio[name='Doctors']").is(":checked");
                 }
 
 
@@ -137,15 +123,15 @@
                 function coffeeRow() {
                     //grab the two id's, just to make the next step easier to read
                     var coffeeID = $("input[name='Doctors']:checked").attr('id');
-                    var sizeID = $("input[name='size']:checked").attr('id');
+
 
                     //grab the text from the label for the element for our output
                     var coffeeLabel = $("label[for='"+coffeeID+"']").text();
-                    var sizeLabel = $("label[for='"+sizeID+"']").text();
 
 
 
-                    var coffeetr = [coffeeLabel, sizeLabel];
+
+                    var coffeetr = [coffeeLabel];
 
                     return coffeetr;
                 }
