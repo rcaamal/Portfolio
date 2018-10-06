@@ -2,7 +2,7 @@
 <!--The landing page of my art website. In the future this will probably have an about section and such.-->
 <html lang="en">
     <head>
-        <title>dr s</title>
+        <title>Coffee Counter</title>
         <!--required meta for bootstrap-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,27 +29,20 @@
                         <p>A daily coffee is part of most people's routine. While coffee isn't bad for you, some of the stuff you ask the barista to put in it can be. Here we can run some numbers on the calories that go into your morning cup.</p>
                     </div>
                 </div>
-                <form id="drform" method="post">
+                <form id="coffeeForm" method="post">
                     <div class="row">
 
-                      <div class="col-md-6">
+                            <div class="col-sm-6">
 
-                     <h4>Doctors</h4>
-                           <div class="inside">
-             <input type="radio" name="Doctors" id="Dr1" checked="checked">
-                 <label for="Dr1">Dr.Mike</label>
+                                <!--COFFEE TYPE-->
+                                    <h4>Coffee Type</h4>
+                                    <div class="inside">
+                                        <input type="radio" name="coffeetype" value="0.5" id="coffee" checked="checked">
+                                        <label for="coffee">Coffee</label>
 
-                 <input type="radio" name="Doctors"  id="Dr2">
-                    <label for="Dr2">Dr.Miguel</label>
-
-                    <input type="radio" name="Doctors"  id="Dr3">
-                       <label for="Dr3">Dr.Violet</label>
-
-                       <input type="radio" name="Doctors"  id="Dr4">
-                          <label for="Dr4">Dr.Sofia</label>
-                       </div>
-
-
+                                        <input type="radio" name="coffeetype" value="1" id="espresso">
+                                        <label for="espresso">Espresso</label>
+                                    </div>
                                 <!--/COFFEE TYPE-->
 
                             </div>
@@ -224,7 +217,7 @@
             <script>
                 //function checks if both required radio buttons are checked
                 function coffeeTypeValidation() {
-                    return $("input:radio[name='Doctors']").is(":checked") && $("input:radio[name='size']").is(":checked");
+                    return $("input:radio[name='coffeetype']").is(":checked") && $("input:radio[name='size']").is(":checked");
                 }
 
                 function coffeeTypeTotal() {
