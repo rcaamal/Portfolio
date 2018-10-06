@@ -25,7 +25,7 @@
                 patients will be attened from urgent to not urgent.</p>
               </div>
             </div>
-            <form action id="drForm" method="post">
+            <form id="drForm" method="post">
 
     <!--Name-->
                  <div class="row">
@@ -34,7 +34,7 @@
                      <h4>Name</h4>
                        <div class="inside">
                          <label for"name" >
-                            <input type="text" id="name" name="Your Name"
+                            <input type="text" id="name" name="YourName"
                               placeholder = "Full name here">
                               </div>
 
@@ -94,7 +94,7 @@
   <!--this will submit it all and show on the same page-->
                            <div class="row">
                      <div class="col-md-12 text-center">
-                       <input type="submit" onclick="#">
+                       <input type="submit" onclick="return finsh()">
                      </div>
                        </div>
 
@@ -124,10 +124,84 @@
                       </tbody>
                     </table>
                   </div>
-                      </div>
+                  </div>
+                </div>
+
+    <!--jquery and javascript-->
+    <script>
+
+    //this is to check if there is an input
+            function Name() {
+           var x = document.forms["drForm"]["YourName"];
+           if (x == "") {
+               alert("Name must be filled out");
+               return false;
+           }
+          }
+
+    function DoctorTab() {
+                   return $("input:radio[name='Doctors']").is(":checked")
+               }
 
 
 
+               function Emergency() {
+              var x = document.forms["drForm"]["emergency"];
+              if (x == "") {
+                  alert("Emergency must be filled out");
+                  return false;
+              }
+             }
+
+
+             function Dates() {
+            var x = document.forms["drForm"]["Date"];
+            if (x == "") {
+                alert("Date must be filled out");
+                return false;
+            }
+           }
+           function allFields(){
+
+           var DoctorID = $("input[name='Doctors']:checked").attr('id');
+                      var doctor= $("label[for='"+DoctorID+"']").text();
+                  var doctorName = [doctor];
+
+                  return doctorName;
+                }
+
+                function createTheTable(){
+                  var slip = [];
+
+                  slip.push(allFields());
+                }
+
+
+                  var html = "";
+          $.each(slip,function(i,a){
+            html += "<tr>"
+                      $.each(a, function(ind,arr){
+                                  html +="<td>"
+                                  html += slip[i][ind];
+                              html +="</td>"
+                                          });
+                                          html += "</tr>"
+                                      });
+                                      $('#outable > tbody').html(html);
+                                  }
+
+                }
+
+           function Finish()
+           {
+             if(DoctorTab()){
+               Name();
+               Emergency();
+               Dates();
+
+             }
+             return false;
+           }
 
 
 
