@@ -347,27 +347,7 @@
                     $('#outtable > tbody').html(html);
                 }
 
-                //if the class 'extras' is checked we set it's value to one, and then the user can increase it.
-                $(".extra:checkbox").change(function(){
-                    //I append the javascript this.name into the jquery string for the selector so that the checked box only changes the number input field with the same name.
-                    if(this.checked){
-                        $("input[type='number'][name= " + this.name + "]").val('1');
-
-                        //set the min for checked boxes
-                        $("input[type='number'][name= " + this.name + "]").attr({"min":"1"});
-                        //let it be changed
-                        $("input[type='number'][name= " + this.name + "]").prop('disabled', false);
-
-                    }
-                    else{
-                        $("input[type='number'][name= " + this.name + "]").val('0');
-                        //if this box was checked and then unchecked, the min  value would no longer be zero, but one. That would mess up our logic!!
-                        $("input[type='number'][name= " + this.name + "]").attr({"min":"0"});
-                        //change it back to disabled
-                        $("input[type='number'][name= " + this.name + "]").prop('disabled', true);
-
-                    }
-                });
+                
 
                 function coffeeCalculation(){
                     if(coffeeTypeValidation()){
