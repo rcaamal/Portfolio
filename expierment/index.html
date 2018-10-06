@@ -69,101 +69,7 @@
                             </div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-
-                            <!--SHOTS-->
-                            <h4>Extra Shots</h4>
-                                <div class="inside">
-                                    <label for='shots'>Extra Espresso</label>
-                                    <input type="number" min="0" max="6" value="0" id="shots">
-                                </div>
-                            <!--/SHOTS-->
-
-                        </div>
-                        <div class="col-sm-6">
-
-                            <!--MILK-->
-                                <h4>Milk</h4>
-                                <div class="inside">
-                                    <input type="radio" id="none" value="0" name="milk" checked="checked"><label for="none">None</label>
-
-                                    <input type="radio" id="skim" value="5" name="milk"><label for="skim">Skim</label>
-
-                                    <input type="radio" id="whole" value="9" name="milk"><label for="whole">Whole</label>
-
-                                    <input type="radio" id="handh" value="20" name="milk"><label for="handh">Half & Half</label>
-
-                                    <input type="radio" id="heavy" value="52" name="milk"><label for="heavy">Heavy</label>
-                                </div>
-                            <!--/MILK-->
-
-                        </div>
-                    </div>
-
-                    <h4>Extras</h4>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="inside">
-                            <!--SUGAR-->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="checkbox" id="sugar" value="49" name="sugar" class="extra"><label for="sugar">Sugar</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="number" id="sugnum" min="0" max="6" name="sugar" class="extra" value="0" disabled="true">
-                                    </div>
-                                </div>
-                            <!--/SUGAR-->
-
-                            <!--WHIP-->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="checkbox" id="whip" name="whip" value="52" class="extra"><label for="whip">Whipped Cream</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="number" id="whipnum" min="0" max="4" name="whip" class="extra" value="0" disabled="true">
-                                    </div>
-                                </div>
-                            <!--/WHIP-->
-
-                            <!--HONEY-->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="checkbox" name="honey" id="honey" value="63" class="extra"><label for="honey">Honey</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="number" id="honnum" min="0" max="4" name="honey" class="extra" value="0" disabled="true">
-                                    </div>
-                                </div>
-                            <!--/HONEY-->
-
-                            <!--ChOCOLATE-->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="checkbox" name="chocolate" id="chocolate" value="55" class="extra" ><label for="chocolate">Chocolate</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="number" min="0" max="4" name="chocolate" id="chocnum" class="extra" value="0" disabled="true">
-                                    </div>
-                                </div>
-                            <!--/CHOCOLATE-->
-
-                            <!--FLAVOR-->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="checkbox" name="flavor" id="flavor" value="40" class="extra"><label for="flavor">Flavored Syrup</label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="number" min="0" max="4" name="flavor" id="flavnum" class="extra" value="0" disabled="true">
-                                    </div>
-                                </div>
-                            <!--FLAVOR-->
-                            </div>
-                        </div>
-                    </div>
-
+                  
                     <!--once the submit button is hit, we'll call a javascript function to add up the total calories, create the output element, and append it to the page-->
                     <div class="row">
                         <div class="col-sm-12 text-center">
@@ -226,7 +132,7 @@
                     return $("input:radio[name='Doctors']").is(":checked") && $("input:radio[name='size']").is(":checked");
                 }
 
-                      
+
 
                 function coffeeRow() {
                     //grab the two id's, just to make the next step easier to read
