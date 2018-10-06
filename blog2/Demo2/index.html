@@ -171,11 +171,7 @@
 
 
               function DoctorTab() {
-           return $("input:radio[name='title']").is(":checked") &&
-           $("input:radio[name='patient']").is(":checked") &&
-           $("input:radio[name='age']").is(":checked") &&
-           $("input:radio[name='Date']").is(":checked") &&
-           $("input:radio[name='Doctors']").is(":checked") &&;
+           return $("input:radio[name='title']").is(":checked") && $("input:radio[name='patient']").is(":checked") && $("input:radio[name='age']").is(":checked") && $("input:radio[name='Date']").is(":checked") $("input:radio[name='Doctors']").is(":checked") &&;
                }
 
 
@@ -196,7 +192,7 @@
                 var dateLabel = $("label[for='"+dateID+"']").text();
                 var doctorLabel = $("label[for='"+drID+"']").text();
 
-          var doc = [titleLabel,patientLabel,ageLabel,dateLabel,doctorLabel];
+          var doc = [titleLabel, patientLabel, ageLabel, dateLabel, doctorLabel];
 
                     return doc;
                 }
