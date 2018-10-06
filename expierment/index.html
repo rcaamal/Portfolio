@@ -275,48 +275,13 @@
                     return coffeetr;
                 }
 
-                function shotsRow() {
-                    shotsNum = parseInt($("#shots").val());
-                    if(shotsNum > 0){
-                        shotsLabel = $("label[for='shots']").text();
-
-                        var shotstr = [shotsLabel, shotsNum, shotsNum];
-
-                        return shotstr;
-                    }
-                }
-
-                function milkRow(){
-                    var milkID = $("input[name='milk']:checked").attr('id');
-                    if(milkID != "none"){
-                        var milkLabel = $("label[for='"+milkID+"']").text();
-                        var milkNum = parseInt($("#"+milkID).val());
-
-                        var milktr = [milkLabel, 1, milkNum];
-
-                        return milktr;
-                    }
-                }
-
-                function extraRows(){
-                   var extrasArr = [];
-                    $(".extra:checkbox:checked").each(function(index){
-                       thisID = $(this).attr('id');
-                       var thisLabel = $("label[for='"+thisID+"']").text();
-                       var thisNum = parseInt($("input[type='number'][name= " + this.name + "]").val());
-                       var thisCalorie = parseInt($(this).val()) * thisNum;
-                       var thisRow = [thisLabel, thisNum, thisCalorie];
-                       extrasArr[index] = thisRow;
-                    });
-                    return extrasArr;
-                }
 
                 function tableMaker() {
                     var tablearr = [];
 
                     tablearr.push(coffeeRow());
 
-                  
+
                     var html = "";
                     $.each(tablearr,function(i,a){
                         html += "<tr>"
