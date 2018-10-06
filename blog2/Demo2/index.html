@@ -174,9 +174,7 @@
                var sliparr = [];
 
                 sliparr.push(docs());
-               sliparr.push(Name());
-               sliparr.push(Emergency());
-               sliparr.push(Dates());
+
 
                var html = "";
                $.each(sliparr,function(i,a){
@@ -193,11 +191,9 @@
 
             function Finish(){
               if(DoctorTab()){
-               Name();
-                Emergency();
-                Dates();
-                 DoctorTab();
-                  docs();
+                createTable()
+
+
               }
               return false;
             }
