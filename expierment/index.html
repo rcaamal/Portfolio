@@ -69,7 +69,7 @@
                             </div>
 
                     </div>
-                  
+
                     <!--once the submit button is hit, we'll call a javascript function to add up the total calories, create the output element, and append it to the page-->
                     <div class="row">
                         <div class="col-sm-12 text-center">
@@ -143,9 +143,9 @@
                     var coffeeLabel = $("label[for='"+coffeeID+"']").text();
                     var sizeLabel = $("label[for='"+sizeID+"']").text();
 
-                    var coffeeCalories = $("input[name='Doctors']:checked").val() * $("input[name='size']:checked").val();
 
-                    var coffeetr = [coffeeLabel, sizeLabel, coffeeCalories];
+
+                    var coffeetr = [coffeeLabel, sizeLabel];
 
                     return coffeetr;
                 }
