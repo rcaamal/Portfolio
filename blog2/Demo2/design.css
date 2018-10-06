@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
 
-body{
-  background-color: #00141;
-}
+    body{
+    style= "background-color: #00141;" >...
+    }
 
-h1{
-  color: black;
-  font-family: "Aladin";
-}
+    h1{
+      color: black;
+      font-family: "Aladin";
+    }
 
-h2,h3,h4{
-  color: blue;
-font-family: "Antic";
-}
+    h2,h3,h4{
+      color: blue;
+    font-family: "Antic";
+    }
 
-.inner{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  background-color: #001a41;
-  color: black;
-}
+    .inner{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      background-color: #001a41;
+      color: black;
+    }
