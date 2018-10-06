@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
+  @import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
 
-    body{
+    body {
       background-color: #001a41;
     }
 
@@ -20,4 +20,7 @@
       margin-bottom: 20px;
       background-color: #00b4fb;
       color: black;
+    }
+    .inside{
+      background color: #00b4fb;
     }
