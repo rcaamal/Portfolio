@@ -1,0 +1,40 @@
+  @import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
+
+              body {
+                background-color: #001a41;
+              }
+
+
+          h1{
+              color: black;
+              font-family: "Aladin";
+          }
+          h2, h3, h4 {
+            color:blue;
+              font-family: "Antic";
+          }
+
+          .inner{
+              padding-top: 20px;
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+              background-color: #00609d;
+              color: black;
+          }
+
+
+
+
+          .inside, #outable {
+              background-color: #00b4fb;
+              color: black;
+              padding:10px;
+              border-radius: 5px;
+          }
+
+            .form{
+              padding:10px;
+              border-radius:10px;
+              background-color:#001a41;
+              color: black
+          }

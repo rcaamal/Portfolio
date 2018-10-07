@@ -1,39 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+
+<!--this is how I designed my webpage-->
+<link rel="stylesheet" type="text/css" href="design.css">
+
+  </head>
+
 <body>
+  <div class="container outer">
+  <div class="text-center">
+    <h1>Doctors Form</h1>
+    <li><a href="https://rcaamal.github.io/portfolio">Portflio</a> | <a href="https://rcaamal.github.io/portfolio/blog2">2nd Blog</a></li>
 
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+    <div class="container inner">
+      <div class="row">
+        <div class="col-xs-11">
+            <p> All patients deserve a good docotr, please fill this form out
+              and we will contact you to schedule an appoinment and when you come
+            in you will fill out the rest of the paper work.</p>
+              </div>
+            </div>
+            <form id="drForm" method="post">
+    <!--Title-->
+    <div class="col-md-6">
+
+   <h4>Title</h4>
+         <div class="inside">
+<input type="radio" name="title" id="T1" checked="checked">
+<label for="T1">Mr.</label>
+
+<input type="radio" name="title"  id="T2">
+  <label for="T2">Mrs.</label>
+
+  <input type="radio" name="title"  id="T3">
+     <label for="T3">Ms.</label>
+
+     <input type="radio" name="title"  id="T4">
+        <label for="T4">Baby/Toddlar</label>
+
+     </div>
+
+
+
+
+<!--Patient-->
 </div>
 
+<div class="col-md-6">
+
+        <h4>New Patient</h4>
+             <div class="inside">
+        <input type="radio" name="patient" id="p1" checked="checked">
+        <label for="p1">Yes</label>
+
+        <input type="radio" name="patient"  id="p2">
+        <label for="p2">No,returning</label>
+
+         </div>
+
+<!--Age-->
+
+                </div>
+                <div class="col-md-6">
+
+               <h4>Age</h4>
+                     <div class="inside">
+            <input type="radio" name="age" id="a1" checked="checked">
+            <label for="a1">New Born-Toddler</label>
+
+            <input type="radio" name="age"  id="a2">
+              <label for="a2">5-10 yrs old</label>
+
+              <input type="radio" name="age"  id="a3">
+                 <label for="a3">11-1 yrs old</label>
+
+                 <input type="radio" name="age"  id="a4">
+                    <label for="a4">18+ yrs old</label>
+                 </div>
+    <!--Date-->
+
+                </div>
+                <div class="col-md-6">
+
+               <h4>Day</h4>
+                     <div class="inside">
+            <input type="radio" name="Date" id="D1" checked="checked">
+            <label for="D1">Mon</label>
+
+            <input type="radio" name="Date"  id="D2">
+              <label for="D2">Tues</label>
+
+              <input type="radio" name="Date"  id="D3">
+                 <label for="D3">Wed</label>
+
+                 <input type="radio" name="Date"  id="D4">
+                    <label for="D4">Thurs</label>
+
+                    <input type="radio" name="Date"  id="D5">
+                       <label for="D5">Fri</label>
+
+                       <input type="radio" name="Date"  id="D6">
+                          <label for="D6">Sat</label>
+
+                          <input type="radio" name="Date"  id="D7">
+                             <label for="D7">Sun</label>
+                 </div>
+
+     <!--Doctor-->
+
+             </div>
+                 <div class="col-md-6">
+
+                  <h4>Doctors</h4>
+                        <div class="inside">
+               <input type="radio" name="Doctors" id="Dr1" checked="checked">
+             <label for="Dr1">Dr.Mike</label>
+
+          <input type="radio" name="Doctors"  id="Dr2">
+             <label for="Dr2">Dr.Miguel</label>
+
+                 <input type="radio" name="Doctors"  id="Dr3">
+                <label for="Dr3">Dr.Violet</label>
+
+                <input type="radio" name="Doctors"  id="Dr4">
+               <label for="Dr4">Dr.Sofia</label>
+                </div>
+                  </div>
+                </div>
+
+  <!--this will submit it all and show on the same page-->
+                           <div class="row">
+                     <div class="col-md-12 text-center">
+                       <input type="submit" onclick="return Finish()">
+                     </div>
+                       </div>
+
+           </form>
+
+      <div class="text-center">
+<p>------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            </div>
+            <div class="text-center">
+              <h3>Your Form</h3>
+              </div>
+              <div class="form">
+                <div class =row>
+                  <div class="col-md-12">
+                    <table class="table table-bordered" id="outable">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>New Patient</th>
+                          <th>Age</th>
+                            <th>Today Is</th>
+                            <th>Doctor</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <div id="myOutcome">
+                        </div>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                  </div>
+
+    <!--jquery and javascript-->
+    <script>
+
+
+
+    //this is to check if there is an input
+
+
+    function DoctorTab() {
+                   return $("input:radio[name='title']").is(":checked")
+                   && $("input:radio[name='patient']").is(":checked")
+                   && $("input:radio[name='age']").is(":checked")
+                    && $("input:radio[name='Date']").is(":checked")
+                    && $("input:radio[name='Doctors']").is(":checked");
+               }
+
+
+
+
+
+           function docs() {
+
+                    var tID = $("input[name='title']:checked").attr('id');
+                    var paID = $("input[name='patient']:checked").attr('id');
+                    var ageID = $("input[name='age']:checked").attr('id');
+                    var daID = $("input[name='Date']:checked").attr('id');
+                    var drID = $("input[name='Doctors']:checked").attr('id');
+
+
+                    var titleLabel = $("label[for='"+tID+"']").text();
+                    var paLabel = $("label[for='"+paID+"']").text();
+                    var ageLabel = $("label[for='"+ageID+"']").text();
+                    var daLabel = $("label[for='"+daID+"']").text();
+                    var drLabel = $("label[for='"+drID+"']").text();
+
+
+                    var doc = [titleLabel,paLabel,ageLabel,daLabel,drLabel];
+
+                    return doc;
+                }
+
+           function createTable() {
+               var sliparr = [];
+
+                sliparr.push(docs());
+
+               var html = "";
+               $.each(sliparr,function(i,a){
+                   html += "<tr>"
+                   $.each(a, function(ind,arr){
+                       html +="<td>"
+                       html += sliparr[i][ind];
+                       html +="</td>"
+                   });
+                   html += "</tr>"
+               });
+               $('#outable > tbody').html(html);
+           }
+
+            function Finish(){
+              if(DoctorTab()){
+                createTable();
+              }
+              return false;
+            }
+
+</script>
 </body>
 </html>
