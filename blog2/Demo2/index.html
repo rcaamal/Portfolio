@@ -15,14 +15,15 @@
 <body>
   <div class="container outer">
   <div class="text-center">
-    <h1>Dr.Slip</h1>
+    <h1>Doctors Form</h1>
     <li><a href="https://rcaamal.github.io/portfolio">Portflio</a> | <a href="https://rcaamal.github.io/portfolio/blog2">2nd Blog</a></li>
 
     <div class="container innter">
       <div class="row">
         <div class="col-xs-11">
-            <p> Please let us know what is wrong with you and we will attend you as soon as we can,
-                patients will be attened from urgent to not urgent.</p>
+            <p> All patients deserve a good docotr, please fill this form out
+              and we will contact you to schedule an appoinment and when you come
+            in you will fill out the rest of the paper work.</p>
               </div>
             </div>
             <form id="drForm" method="post">
@@ -130,7 +131,8 @@
   <!--this will submit it all and show on the same page-->
                            <div class="row">
                      <div class="col-md-12 text-center">
-                       <input type="submit" onclick="return Finish()">
+                       <input type="submit" onclick="return Finish()" id="submits">
+                       <label for="submits">Submit Form</label>
                      </div>
                        </div>
 
@@ -140,7 +142,7 @@
   <p>-------------------------------------------------------------------------------------------</p>
             </div>
             <div class="text-center">
-              <h3>The Appointment</h3>
+              <h3>Your Form Has been Submited</h3>
               </div>
               <div class="slip">
                 <div class =row>
@@ -171,8 +173,11 @@
 
 
     function DoctorTab() {
-                   return $("input:radio[name='title']").is(":checked") && $("input:radio[name='patient']").is(":checked")
-                   && $("input:radio[name='age']").is(":checked") && $("input:radio[name='Date']").is(":checked");
+                   return $("input:radio[name='title']").is(":checked")
+                   && $("input:radio[name='patient']").is(":checked")
+                   && $("input:radio[name='age']").is(":checked")
+                    && $("input:radio[name='Date']").is(":checked")
+                    && $("input:radio[name='Doctor']").is(":checked");
                }
 
 
@@ -193,7 +198,7 @@
                     var ageLabel = $("label[for='"+ageID+"']").text();
                     var daLabel = $("label[for='"+daID+"']").text();
                     var drLabel = $("label[for='"+drID+"']").text();
-                    
+
 
                     var doc = [titleLabel,paLabel,ageLabel,daLabel,drLabel];
 
