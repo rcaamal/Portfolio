@@ -27,31 +27,14 @@
 
           .inside, #outable {
               background-color: #00b4fb;
-              color: navyblue;
+              color: black;
               padding:10px;
               border-radius: 5px;
           }
 
-          input[type="submit"]{
-              width:50%;
-              background-color: #001a41;
-              border: none;
-              margin: 10px;
-              margin-bottom: 20px;
-              padding: 10px;
-              font-size: 24px;
-              border-radius: 10px;
-              box-shadow: 0 9px #000;
-          }
-          input[type="submit"]:active{
-              background-color: #521808;
-              box-shadow: 0 5px #000;
-              transform: translateY(4px);
-          }
-
-
-          .output{
+            .form{
               padding:10px;
               border-radius:10px;
               background-color:#001a41;
+              color: black
           }
