@@ -171,7 +171,7 @@
 
 
     function DoctorTab() {
-                   return $("input:radio[name='title']").is(":checked") && $("input:radio[name='patient']").is(":checked");
+                   return $("input:radio[name='title']").is(":checked") && $("input:radio[name='patient']").is(":checked") && $("input:radio[name='age']").is(":checked");
                }
 
 
@@ -182,11 +182,12 @@
                     //grab the two id's, just to make the next step easier to read
                     var drID = $("input[name='title']:checked").attr('id');
                     var paID = $("input[name='patient']:checked").attr('id');
-
+                    var ageID = $("input[name='age']:checked").attr('id');
 
                     var doctorLabel = $("label[for='"+drID+"']").text();
                     var paLabel = $("label[for='"+paID+"']").text();
-                      var doc = [doctorLabel,paLabel];
+                    var ageLabel = $("label[for='"+ageID+"']").text();
+                      var doc = [doctorLabel,paLabel,ageLabel];
 
                     return doc;
                 }
