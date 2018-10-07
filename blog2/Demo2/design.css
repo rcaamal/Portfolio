@@ -18,19 +18,14 @@
               padding-top: 20px;
               padding-bottom: 20px;
               margin-bottom: 20px;
-              background-color: #00b4fb;
+              background-color: #00609d;
               color: black;
           }
 
-          input[type="number"] {
-              border: none;
-              border-radius: 5px;
-              padding: 2px;
-              background-color: white;
-          }
 
 
-          .inside, #outable, .outtotal {
+
+          .inside, #outable {
               background-color: #00b4fb;
               color: navyblue;
               padding:10px;
