@@ -1,66 +1,62 @@
   @import url('https://fonts.googleapis.com/css?family=Aladin|Antic');
 
-    body {
-      background-color: #00b4fb
-    }
+              body {
+                background-color: #001a41;
+              }
 
 
-h1{
-    color: black;
-    font-family: "Aladin";
-}
-h2, h3, h4 {
-  color:blue;
-    font-family: "Antic";
-}
+          h1{
+              color: black;
+              font-family: "Aladin";
+          }
+          h2, h3, h4 {
+            color:blue;
+              font-family: "Antic";
+          }
 
-.inner{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    background-color: #00b4fb;
-    color: black;
-}
+          .inner{
+              padding-top: 20px;
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+              background-color: #00b4fb;
+              color: black;
+          }
 
-input[type="number"] {
-    border: none;
-    border-radius: 5px;
-    padding: 2px;
-    background-color: white;
-}
-
-input[type="number"]:disabled {
-    background-color: #dddddd;
-    color: #999999;
-}
-
-.inside, #outtable, .outtotal {
-    background-color: antiquewhite;
-    color: #6a371c;
-    padding:10px;
-    border-radius: 5px;
-}
-
-input[type="submit"]{
-    width:50%;
-    background-color: #001a41;
-    border: none;
-    margin: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 24px;
-    border-radius: 10px;
-    box-shadow: 0 9px #000;
-}
-input[type="submit"]:active{
-    background-color: #521808;
-    box-shadow: 0 5px #000;
-    transform: translateY(4px);
-}
+          input[type="number"] {
+              border: none;
+              border-radius: 5px;
+              padding: 2px;
+              background-color: white;
+          }
 
 
-.output{
-    padding:10px;
-    border-radius:10px;
-    background-color:#001a41;
-}
+          .inside, #outable, .outtotal {
+              background-color: antiquewhite;
+              color: #6a371c;
+              padding:10px;
+              border-radius: 5px;
+          }
+
+          input[type="submit"]{
+              width:50%;
+              background-color: #001a41;
+              border: none;
+              margin: 10px;
+              margin-bottom: 20px;
+              padding: 10px;
+              font-size: 24px;
+              border-radius: 10px;
+              box-shadow: 0 9px #000;
+          }
+          input[type="submit"]:active{
+              background-color: #521808;
+              box-shadow: 0 5px #000;
+              transform: translateY(4px);
+          }
+
+
+          .output{
+              padding:10px;
+              border-radius:10px;
+              background-color:#001a41;
+          }
