@@ -49,11 +49,7 @@ namespace javacode2
     }
 
 
-
-
-
-
-    /**
+  /**
  * A custom unchecked exception to represent situations where 
  * an illegal operation was performed on an empty queue.
  */
@@ -70,8 +66,6 @@ namespace javacode2
             
         }
     }
-
-
 
 
 
@@ -247,7 +241,3 @@ namespace javacode2
         }
     }
 }
-
-
-
-
