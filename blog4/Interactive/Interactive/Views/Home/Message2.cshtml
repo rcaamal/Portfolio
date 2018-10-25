@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Message2";
+}
+
+<h2>Message2</h2>
+
+@using (Html.BeginForm("Message2", "Home", FormMethod.Post))
+{
+    @Html.Label("Name", "Name")
+    @Html.TextBox("Name",null, htmlAttributes:new { @class="form-control", type="number"})
+}
+
+@Html.ActionLink("Link Text", "Contact", "Home")

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Convert Miles to Metric";
+}
+<h2>@ViewBag.Title</h2>
+
+
+
+
+<title>Convert Miles to Metric</title>
+
+<form action="/Home/MetricConverter" method="get">
+    <label for="num">Miles</label><br />
+    <input type="number" name="num" value="" /><br /><br />
+
+    <label for="type">Select a Unit</label><br />
+    <hr>
+    <input type="radio" name="metric" value="ilimeters" checked /> Milimeters <br />
+    <input type="radio" name="metric" value="centimeters" /> Centimeters <br />
+    <input type="radio" name="metric" value="meters" /> Meters <br />
+    <input type="radio" name="metric" value="kilometers" /> Kilometers <br /><br />
+    <input type="submit" value="Convert" />
+</form>
+
+<ul style="list-style:none;">
+    <li style="margin-top:10px;">Milimeters: @ViewBag.i</li>
+    <li style="margin-top:10px;">Centimeters: @ViewBag.c</li>
+    <li style="margin-top:10px;">Meters: @ViewBag.m</li>
+    <li style="margin-top:10px;">Kilometers: @ViewBag.k</li>
+</ul>
+<br />
+@*Html.ActionLink("Refresh", "MetricConverter", "Home")*@
+
