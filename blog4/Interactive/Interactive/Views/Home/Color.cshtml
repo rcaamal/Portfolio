@@ -1,0 +1,23 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Color";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>This is where you can add hexadecimal code to mix colors</p>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("First Color: ")
+    @Html.TextBox("fColor", null, new { @class = "form-control", placeholder = "#F00F0F ", pattern = "^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$", required = "required" })
+
+    @Html.Label("Second Color: ")
+    @Html.TextBox("sColor", null, new { @class = "form-control", placeholder = "#F00F0F ", pattern = "^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$", required = "required" })
+    <br/>
+    <input type="submit" value="Mix" />
+
+}
