@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WideWorldImporters.Models.InvoiceLine>
+
+<br /> <br />
+
+<h2>Purchases</h2>
+
+
+<p>
+    Search for a description of a purchase you are looking for.
+</p>
+
+
+
+@using (Html.BeginForm("Purchases", "Home", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.TextBox("search") <input type="submit" value="Search" /> @Html.ActionLink("Profit Search", "Profit")
+
+}
+
+<br /> <br />
+
+<table class="table table-bordered striped">
+    <thead>
+        <tr>
+            <th>
+                Description
+            </th>
+            <th>
+                Invoice ID
+            </th>
+            <th>
+                Extended Price
+            </th>
+            <th>
+                Line Profit
+            </th>
+            
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="3" style="color:red">
+                    No Match Any Document
+                </td>
+            </tr>
+        }
+
+
+        else
+        {
+            foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.InvoiceLineID
+                </td>
+                <td>
+                    @item.ExtendedPrice
+                </td>
+
+                <td>
+                    @item.LineProfit
+                </td>
+
+
+            </tr>
+            }
+        }
+
+    </tbody>
+
+
+</table>
