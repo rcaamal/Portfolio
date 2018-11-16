@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WideWorldImporters.Models.Supplier>
+
+<br /> <br />
+
+<h2>Company</h2>
+
+
+<p>
+    Search for the client you are looking for, either by the first letter of their name or by full name.
+</p>
+
+
+
+@using (Html.BeginForm("Company", "Home", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.TextBox("search") <input type="submit" value="Search" /> @Html.ActionLink("Purchase Search", "Purchases")
+
+}
+
+<br /> <br />
+
+<table class="table table-bordered striped">
+    <thead>
+        <tr>
+            <th>
+                Company Name
+            </th>
+            <th>
+                Person ID
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Fax Number
+            </th>
+            <th>
+               Website
+            </th>
+            <th>
+               Year as Customer
+            </th>
+
+           
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="3" style="color:red">
+                    No Match Any Document
+                </td>
+            </tr>
+        }
+
+
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.SupplierName
+                    </td>
+                    <td>
+                        @item.PrimaryContactPersonID
+                    </td>
+                    <td>
+                        @item.PhoneNumber
+                    </td>
+                    <td>
+                        @item.FaxNumber
+                    </td>
+                    <td>
+                        @item.WebsiteURL
+                    </td>
+                    <td>
+                        @item.ValidFrom
+                    </td>
+                    
+                </tr>
+            }
+        }
+
+    </tbody>
+
+
+</table>

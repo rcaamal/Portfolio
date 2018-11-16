@@ -1,0 +1,113 @@
+﻿@model IEnumerable<WideWorldImporters.Models.Person>
+
+<br /> <br />
+
+<h2>WorldWideImporters</h2>
+
+
+<p>
+    Search for the client you are looking for, either by the first letter of their name or by full name.
+</p>
+
+
+
+@using (Html.BeginForm("WorldWideImporters", "Home", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.TextBox("searching") <input type="submit" value="Search" />   @Html.ActionLink("Company Search", "Company")
+
+}
+
+<br /> <br />
+
+<table class="table table-bordered striped">
+    <thead>
+        <tr>
+            <th>
+                Full Name
+            </th>
+            <th>
+                Person ID
+            </th>
+            <th>
+                Preferred Name
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Fax Number
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Date Became Customer, Member or Employee
+            </th>
+
+            <th>
+                Their Photo
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model == null)
+        {
+            <tr>
+                <td colspan="3" style="color:red">
+                    No Match Any Document
+                </td>
+            </tr>
+        }
+
+
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.FullName
+                    </td>
+                    <td>
+                        @item.PersonID
+                    </td>
+
+                    <td>
+                        @item.PreferredName
+                    </td>
+                    <td>
+                        @item.PhoneNumber
+                    </td>
+                    <td>
+                        @item.FaxNumber
+                    </td>
+                    <td>
+                        @item.EmailAddress
+                    </td>
+                    <td>
+                        @item.ValidFrom
+                    </td>
+                    <td>
+                        @item.Photo
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+
+</table>
+
+
+
+
+
+
+
+
+
